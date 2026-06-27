@@ -1,13 +1,19 @@
-import './App.css'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import SocialLinks from "./components/SocialLinks";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-   Helloo.... Devansh here
-    </>
-  )
+    <div className="bg-black text-white min-h-screen">
+
+      <Navbar />
+
+      <SocialLinks />
+
+      <Hero />
+
+    </div>
+  );
 }
 
-export default App
+export default App;
