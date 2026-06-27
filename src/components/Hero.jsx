@@ -26,7 +26,7 @@ function Hero() {
   </p>
 
 <h1 className="text-8xl font-bold mt-2 leading-none">  
-    DEVANSH SRIVASTAVA
+      DEVANSH SRIVASTAVA
   </h1>
 
   <p className="text-2xl mt-6">

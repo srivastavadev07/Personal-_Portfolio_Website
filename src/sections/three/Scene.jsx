@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float } from "@react-three/drei";
 import SphereModel from "./SphereModel";
+import { Stars } from "@react-three/drei";
 
 function Scene() {
   return (
