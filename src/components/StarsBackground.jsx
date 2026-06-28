@@ -10,7 +10,7 @@ function StarsBackground() {
   depth={40}
   count={3000}
   factor={1}
-  saturation={0}
+  saturation={0.5}
 //   fade={false}
   speed={0.5}
 />

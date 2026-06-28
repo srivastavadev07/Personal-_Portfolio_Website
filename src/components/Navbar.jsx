@@ -21,6 +21,13 @@ function Navbar() {
           About
     </a>
         </li>
+        <li className="text-white cursor-pointer hover:text-purple-500 hover:-translate-y-1 transition-all duration-300">
+     <a
+      href="#skills"
+      className="hover:text-purple-500 transition">
+          Skills
+    </a>
+        </li>
 
         <li className="text-white cursor-pointer hover:text-purple-500 hover:-translate-y-1 transition-all duration-300">
  <a
