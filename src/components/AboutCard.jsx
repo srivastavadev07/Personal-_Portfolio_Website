@@ -1,12 +1,19 @@
 function AboutCard({ title, description }) {
   return (
     <div className="
-bg-[#08142e]
-rounded-3xl
-p-8
-hover:scale-105
-transition-all
-duration-300
+    bg-slate-900/80
+    backdrop-blur-md
+    p-6
+    rounded-3xl
+    border border-transparent
+
+    hover:border-purple-500
+    hover:-translate-y-2
+    hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
+
+    transition-all
+    duration-300
+
 ">
       
       <h2 className="text-6xl font-bold mb-6"></h2>

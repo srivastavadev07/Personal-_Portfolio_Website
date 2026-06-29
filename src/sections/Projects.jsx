@@ -1,4 +1,5 @@
 import { FaRobot, FaGlobe } from "react-icons/fa";
+import { motion } from "framer-motion";
 function Projects() {
   const projects = [
     {
@@ -30,36 +31,40 @@ function Projects() {
   ];
 
   return (
-    <section
-      id="projects"
-      className="min-h-screen flex flex-col justify-center px-20"
+<motion.section
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}      id="projects"
+      className="min-h-screen flex items-center flex-col justify-center px-20"
     >
-      <h2 className="text-5xl font-bold text-center mb-4">
+      <h2 className="text-5xl font-bold mb-4">
         My <span className="text-purple-500">Projects</span>
       </h2>
 
-      <p className="text-center text-gray-400 mb-12">
+      <p className=" text-gray-400 mb-12">
         Projects I've built and learned from
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         {projects.map((project) => (
-          <div
-            key={project.title}
-            className="
-              bg-slate-900/80
-              backdrop-blur-md
-              p-6
-              rounded-3xl
-              flex flex-col justify-between
-              border border-transparent
-              hover:border-purple-500
-              hover:-translate-y-2
-              hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]
-              transition-all duration-300
-            "
-          >
-            <h3 className="text-2xl font-bold mb-2">
+<div
+  key={project.title}
+  className="
+    bg-slate-900/80
+    backdrop-blur-md
+    p-6
+    rounded-3xl
+    border border-transparent
+
+    hover:border-purple-500
+    hover:-translate-y-2
+    hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
+
+    transition-all
+    duration-300
+  "
+>            <h3 className="text-2xl font-bold mb-2">
               {project.title}
             </h3>
 
@@ -92,7 +97,8 @@ function Projects() {
     href={project.demo}
     target="_blank"
     rel="noreferrer"
-    className="inline-block mt-4 px-4 py-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition"
+    className="inline-block mt-4 px-4 py-2 rounded-full bg-purple-600 text-white hover:scale-105
+active:scale-95 hover:bg-purple-700 transition"
   >
     Live Demo
   </a>
@@ -102,7 +108,8 @@ function Projects() {
     href={project.github}
     target="_blank"
     rel="noreferrer"
-    className="inline-block mt-6 px-4 py-2 rounded-full border border-purple-500 text-purple-300 hover:bg-purple-500 hover:text-white transition"
+    className="inline-block mt-6 px-4 py-2 rounded-full border border-purple-500 text-purple-300 hover:scale-105
+active:scale-95 hover:bg-purple-500 hover:text-white transition"
   >
     View Code
   </a>
@@ -132,8 +139,7 @@ function Projects() {
           </div>
         ))}
       </div>
-    </section>
-  );
+</motion.section>  );
 }
 
 export default Projects;

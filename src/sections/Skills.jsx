@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -47,15 +48,19 @@ const skillCategories = [
 ];
 
   return (
-    <section
+<motion.section
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
       id="skills"
-      className="min-h-screen flex flex-col justify-center px-20"
+      className="min-h-screen flex items-center flex-col justify-center px-20"
     >
 <h2 className="text-6xl font-bold mb-12">
   My <span className="text-purple-500">Skills</span>
 </h2>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         {skillCategories.map((category) => (
           <div
             key={category.title}
@@ -66,6 +71,11 @@ const skillCategories = [
               transition-all
               duration-300
               hover:scale-105
+              hover:-translate-y-2
+hover:border-purple-500
+hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
+transition-all
+duration-300
               hover:border
               hover:border-purple-500
             "
@@ -78,7 +88,19 @@ const skillCategories = [
 {category.skills.map((skills) => (
   <span
     key={skills.name}
-    className="flex items-center gap-2 px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40"
+    className=" bg-slate-900/80
+    backdrop-blur-md
+    p-6
+    rounded-3xl
+    border border-transparent
+
+    hover:border-purple-500
+    hover:-translate-y-2
+    hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
+
+    transition-all
+    duration-300
+"
   >
     {skills.icon}
     {skills.name}
@@ -88,8 +110,7 @@ const skillCategories = [
           </div>
         ))}
       </div>
-    </section>
-  );
+</motion.section>  );
 }
 
 export default Skills;

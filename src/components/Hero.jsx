@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Scene from "../sections/three/Scene";
 function Hero() {
   return (
-    <section className="h-[85vh] flex items-center justify-center pl-24">
+    <section className="h-[85vh] flex items-center justify-center md:pl-24">
 
-      <div className="grid grid-cols-2 gap-8 items-center ml-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:ml-32">
 
 <motion.div
   initial={{
@@ -25,7 +25,7 @@ function Hero() {
     Hello! I'm
   </p>
 
-<h1 className="text-8xl font-bold mt-2 leading-none">  
+<h1 className="text-5xl md:text-7xl font-bold mt-2 leading-none">  
       DEVANSH SRIVASTAVA
   </h1>
 
