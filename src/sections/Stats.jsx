@@ -7,8 +7,8 @@ function Stats() {
   ];
 
   return (
-    <section className="py-24 px-20">
-      <div className="grid grid-cols-2 md:grid-cols-4">
+    <section className="py-24 px-6 md:px-20">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {stats.map((stat) => (
           <div
             key={stat.label}

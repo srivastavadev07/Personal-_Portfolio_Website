@@ -54,14 +54,13 @@ const skillCategories = [
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
       id="skills"
-      className="min-h-screen flex items-center flex-col justify-center px-20"
+      className="min-h-screen flex items-center flex-col justify-center px-6 md:px-20"
     >
 <h2 className="text-6xl font-bold mb-12">
   My <span className="text-purple-500">Skills</span>
 </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        {skillCategories.map((category) => (
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">        {skillCategories.map((category) => (
           <div
             key={category.title}
             className="

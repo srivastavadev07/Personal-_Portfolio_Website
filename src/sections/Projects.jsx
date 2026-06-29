@@ -36,7 +36,7 @@ function Projects() {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}      id="projects"
-      className="min-h-screen flex items-center flex-col justify-center px-20"
+      className="min-h-screen flex items-center flex-col justify-center px-6 md:px-20"
     >
       <h2 className="text-5xl font-bold mb-4">
         My <span className="text-purple-500">Projects</span>
@@ -46,7 +46,7 @@ function Projects() {
         Projects I've built and learned from
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {projects.map((project) => (
 <div
   key={project.title}

@@ -1,6 +1,8 @@
+
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float } from "@react-three/drei";
 import SphereModel from "./SphereModel";
+// import AvatarModel from "./AvatarModel";
 import { Stars } from "@react-three/drei";
 
 function Scene() {
@@ -26,6 +28,7 @@ function Scene() {
         floatIntensity={2}
       >
         <SphereModel />
+        {/* <AvatarModel /> */}
       </Float>
 
       <OrbitControls enableZoom={false} />
@@ -33,5 +36,35 @@ function Scene() {
     </Canvas>
   );
 }
-
 export default Scene;
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls, Float } from "@react-three/drei";
+// import { Suspense } from "react";
+// import AvatarModel from "./AvatarModel";
+
+// function Scene() {
+//   return (
+//     <Canvas camera={{ position: [0, 0, 5] }}>
+//       <ambientLight intensity={1} />
+
+//       <pointLight
+//         position={[0, 0, 3]}
+//         intensity={15}
+//         color="#a855f7"
+//       />
+
+//       <Suspense fallback={null}>
+//         <Float speed={2}>
+//           <AvatarModel />
+//         </Float>
+//       </Suspense>
+
+//       <OrbitControls
+//         enableZoom={false}
+//         autoRotate={false}
+//       />
+//     </Canvas>
+//   );
+// }
+
+// export default Scene;
