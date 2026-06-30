@@ -31,22 +31,24 @@ function Hero() {
             Python Developer | AI Enthusiast
           </p>
 
-          <button
-            className="
-              bg-purple-600
-              px-8 py-4
-              rounded-xl
-              mt-8
-              transition-all
-              duration-300
-              hover:scale-110
-              hover:bg-purple-500
-              hover:shadow-[0_0_30px_#a855f7]
-            "
-          >
-            View Projects
-          </button>
-        </motion.div>
+<a
+  href="#projects"
+  className="
+    inline-block
+    bg-purple-600
+    px-8
+    py-4
+    rounded-xl
+    mt-8
+    transition-all
+    duration-300
+    hover:scale-110
+    hover:bg-purple-500
+    hover:shadow-[0_0_30px_#a855f7]
+  "
+>
+  View Projects
+</a>        </motion.div>
 
         {/* Right Side */}
         <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">

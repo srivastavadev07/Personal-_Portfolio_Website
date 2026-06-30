@@ -4,9 +4,9 @@ function Projects() {
   const projects = [
     {
       title: "Personal Portfolio",
-      status: "🚧 In Progress",
+      status: "'🌐Live Portfolio",
       description:
-        "A modern 3D portfolio website built using React, Tailwind CSS, and Three.js with interactive animations and responsive design.",
+        "A modern 3D portfolio website built using React, Tailwind CSS, and Three.js featuring interactive animations, responsive design, and a functional contact form.",
       tech: ["React", "Tailwind", "Three.js"],
       demo: "#",
     },
