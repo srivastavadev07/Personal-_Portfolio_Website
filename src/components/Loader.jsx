@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 function Loader() {
-  const [showFullName, setShowFullName] = useState(false);
+  const [stage, setStage] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowFullName(true);
+      setStage(1);
     }, 1500);
 
     return () => clearTimeout(timer);
@@ -23,21 +23,56 @@ function Loader() {
         z-[9999]
       "
     >
-<h1
-  className="
-    bg-gradient-to-r
-    from-purple-400
-    to-fuchsia-500
-    bg-clip-text
-    text-transparent
-    text-5xl
-    md:text-8xl
-    font-bold
-    animate-pulse
-  "
->
-  {showFullName ? "Devansh Srivastava" : "DS"}
-</h1>    </div>
+      <div className="text-center px-4">
+        {stage === 0 ? (
+          <h1
+            className="
+              bg-gradient-to-r
+              from-purple-400
+              to-fuchsia-500
+              bg-clip-text
+              text-transparent
+              text-5xl
+              md:text-8xl
+              font-bold
+            "
+          >
+            DS
+          </h1>
+        ) : (
+          <>
+            <h1
+              className="
+                bg-gradient-to-r
+                from-purple-400
+                to-fuchsia-500
+                bg-clip-text
+                text-transparent
+                font-bold
+                whitespace-nowrap
+                text-[8vw]
+                md:text-7xl
+              "
+            >
+              Devansh Srivastava
+            </h1>
+
+            <p
+              className="
+                mt-3
+                text-gray-400
+                text-sm
+                sm:text-lg
+                md:text-2xl
+                tracking-wide
+              "
+            >
+              Aspiring Software Engineer
+            </p>
+          </>
+        )}
+      </div>
+    </div>
   );
 }
 
