@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -17,10 +17,10 @@ function Contact() {
 
       <div className="flex gap-8 text-4xl mb-12">
         <a
-          href="mailto:srivastavadev2007@gmail.com"
+          href="https://www.instagram.com/devansh41985?igsh=d2E3OWxpd2I4bDhu"
           className="hover:text-purple-500 hover:scale-110 transition-all duration-300"
         >
-          <FaEnvelope />
+          <FaInstagram />
         </a>
 
         <a

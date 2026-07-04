@@ -11,6 +11,7 @@ import ScrollProgress from "./components/ScrollProgress";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import { useState, useEffect } from "react";
+import CustomCursor from "./components/CustomCursor";
 {/* <div className="bg-black text-white overflow-x-hidden"></div> */}
 
 function App() {
@@ -34,6 +35,10 @@ useEffect(() => {
       <StarsBackground />
 
       <div className="relative z-10 bg-transparent text-white">
+        <>
+  <CustomCursor />
+  {/* Rest of portfolio */}
+</>
         <Navbar />
         <SocialLinks />
         <Hero />
